@@ -108,15 +108,6 @@ The submitted project archive contains the following original files and artifact
 | DRC/connectivity reports | `pnr/violations_output/` |
 | Screenshots extracted from report | `images/` |
 
-## Scope and limitations
-
-- **Academic implementation:** This is an educational RTL-to-layout project using GPDK45 and Cadence EDA tools, not a fabricated silicon prototype.
-- **Tool dependencies:** Reproducing the exact implementation requires compatible licensed tools, technology files, standard-cell libraries, and configuration; scripts may include paths specific to the original UBC environment.
-- **Deliverables:** The available project archive contains RTL, testbenches, synthesis/physical-design scripts, reports, and screenshots. **A final GDSII file is not included** in the available archive; the repository should not imply otherwise.
-- **Verification scope:** Randomized reference-model checking and SDF-annotated post-layout simulation provide evidence for the exercised behaviors. They are not exhaustive formal proof.
-- **Timing and physical checks:** Results are from the documented educational flow and its analyzed corners and checking rules; they are not foundry sign-off results.
-- **Licensing:** Before publishing any generated netlist, SDF, design database, or technology-dependent output, confirm redistribution rights. Avoid committing proprietary PDK/library contents or licensed EDA collateral.
-
 ## Author
 
 **Kaisaan (Keefee) Rahman**  
