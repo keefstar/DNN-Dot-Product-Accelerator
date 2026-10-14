@@ -1,6 +1,6 @@
 # DNN Dot-Product Accelerator | RTL-to-Layout Implementation
 
-An end-to-end digital IC implementation project developed for **ELEC 402 at the University of British Columbia**. The project implements a dot-product accelerator in SystemVerilog, verifies its behavior against a reference model, and takes the design through **Cadence Genus synthesis and Cadence Innovus place-and-route**, followed by physical checks and timing-aware post-layout simulation.
+An end-to-end digital IC implementation project which implements a dot-product accelerator in SystemVerilog, verifies its behavior against a reference model, and takes the design through **Cadence Genus synthesis and Cadence Innovus place-and-route**, followed by physical checks and timing-aware post-layout simulation.
 
 The design uses four parallel 16-bit multipliers to compute dot products and provides a 64-entry result-memory interface. This README focuses on the **implementation flow and supporting evidence**, rather than a detailed walkthrough of the RTL.
 
@@ -70,7 +70,7 @@ The CCOpt report describes a **four-level buffered clock tree** driving **755 po
 
 Routing initially completed without DRC or connectivity violations. Filling remaining standard-cell gaps eliminated the checked gap conditions but introduced reported physical-rule/connectivity violations. The implementation flow then used `ecoRoute` to repair the affected routing.
 
-| Before correction | After `ecoRoute` |
+| Before correction | After ecoRoute |
 | --- | --- |
 | ![Example metal-short violation after filler insertion](images/drc_violation_before.png) | ![Corrected layout after ECO routing](images/drc_after_eco_route.png) |
 
@@ -120,4 +120,4 @@ The submitted project archive contains the following original files and artifact
 ## Author
 
 **Kaisaan (Keefee) Rahman**  
-University of British Columbia · ELEC 402
+University of British Columbia 
