@@ -1,0 +1,333 @@
+Clock tree timing engine global stage delay update for dc_lsMax_rcWorst:setup.early...
+Clock tree timing engine global stage delay update for dc_lsMax_rcWorst:setup.early done. (took cpu=0:00:00.0 real=0:00:00.0)
+Clock tree timing engine global stage delay update for dc_lsMax_rcWorst:setup.late...
+Clock tree timing engine global stage delay update for dc_lsMax_rcWorst:setup.late done. (took cpu=0:00:00.0 real=0:00:00.0)
+Clock tree timing engine global stage delay update for dc_lsMin_rcBest:hold.early...
+Clock tree timing engine global stage delay update for dc_lsMin_rcBest:hold.early done. (took cpu=0:00:00.0 real=0:00:00.0)
+Clock tree timing engine global stage delay update for dc_lsMin_rcBest:hold.late...
+Clock tree timing engine global stage delay update for dc_lsMin_rcBest:hold.late done. (took cpu=0:00:00.0 real=0:00:00.0)
+
+Skew Group Structure:
+=====================
+
+-----------------------------------------------------------------
+Skew Group    Sources    Constrained Sinks    Unconstrained Sinks
+-----------------------------------------------------------------
+CLK/cmFunc       1              755                    0
+-----------------------------------------------------------------
+
+Skew Group Summary:
+===================
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Timing Corner                   Skew Group    ID Target    Min ID    Max ID    Avg ID    Std.Dev. ID    Skew Target Type    Skew Target    Skew     Skew window occupancy
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dc_lsMax_rcWorst:setup.early    CLK/cmFunc        -        0.363     0.395     0.379        0.007       ignored                  -         0.032              -
+dc_lsMax_rcWorst:setup.late     CLK/cmFunc    none         0.364     0.396     0.380        0.007       auto computed        0.162         0.032    100% {0.364, 0.396}
+dc_lsMin_rcBest:hold.early      CLK/cmFunc        -        0.073     0.078     0.075        0.001       ignored                  -         0.005              -
+dc_lsMin_rcBest:hold.late       CLK/cmFunc        -        0.074     0.079     0.076        0.001       ignored                  -         0.005              -
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* - indicates that target was not met.
+
+Skew Group Min/Max path pins:
+=============================
+
+----------------------------------------------------------------------------------
+Timing Corner                   Skew Group    Min ID    PathID    Max ID    PathID
+----------------------------------------------------------------------------------
+dc_lsMax_rcWorst:setup.early    CLK/cmFunc    0.363       1       0.395       2
+-    min mul3_stage1_regs_reg[9][5]/CK
+-    max mul2_stage1_regs_reg[14][3]/CK
+dc_lsMax_rcWorst:setup.late     CLK/cmFunc    0.364       3       0.396       4
+-    min mul3_stage1_regs_reg[9][5]/CK
+-    max mul2_stage1_regs_reg[14][3]/CK
+dc_lsMin_rcBest:hold.early      CLK/cmFunc    0.073       5       0.078       6
+-    min mul1_output_val_reg_reg[12]/CK
+-    max mul2_stage1_regs_reg[14][3]/CK
+dc_lsMin_rcBest:hold.late       CLK/cmFunc    0.074       7       0.079       8
+-    min mul1_output_val_reg_reg[12]/CK
+-    max mul3_stage1_regs_reg[3][2]/CK
+----------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMax_rcWorst:setup.early, min clock_path:
+======================================================================
+
+PathID    : 1
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul3_stage1_regs_reg[9][5]/CK
+Delay     : 0.363
+
+----------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location         Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                    (um)              
+-- Clockpath trace ---------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.018  (0.000,38.000)   -           3     
+CTS_ccl_a_buf_00252/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (38.900,55.195)   56.095   -       
+CTS_ccl_a_buf_00252/Y
+-     CLKBUFX8  rise   0.084   0.085   0.045  0.010  (38.315,55.045)    0.735     4     
+CTS_ccl_a_buf_00241/A
+-     CLKBUFX8  rise   0.000   0.086   0.045  -      (37.700,60.325)    5.895   -       
+CTS_ccl_a_buf_00241/Y
+-     CLKBUFX8  rise   0.099   0.184   0.038  0.007  (37.115,60.475)    0.735     4     
+CTS_ccl_a_buf_00193/A
+-     CLKBUFX3  rise   0.000   0.184   0.038  -      (24.300,87.685)   40.025   -       
+CTS_ccl_a_buf_00193/Y
+-     CLKBUFX3  rise   0.085   0.270   0.032  0.003  (24.085,87.100)    0.800     4     
+CTS_ccl_a_buf_00037/A
+-     CLKBUFX2  rise   0.000   0.270   0.032  -      (8.765,87.455)    15.675   -       
+CTS_ccl_a_buf_00037/Y
+-     CLKBUFX2  rise   0.093   0.363   0.034  0.002  (8.410,87.925)     0.825     4     
+mul3_stage1_regs_reg[9][5]/CK
+-     DFFQX2    rise   0.000   0.363   0.034  -      (8.570,82.570)     5.515   -       
+----------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMax_rcWorst:setup.early, max clock_path:
+======================================================================
+
+PathID    : 2
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul1_stage1_regs_reg[3][0]/CK
+Delay     : 0.395
+
+------------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location           Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                      (um)              
+-- Clockpath trace -----------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.018  (0.000,38.000)     -           3     
+CTS_ccl_a_buf_00251/A
+-     CLKBUFX8  rise   0.002   0.002   0.004  -      (72.300,115.045)   149.345   -       
+CTS_ccl_a_buf_00251/Y
+-     CLKBUFX8  rise   0.083   0.085   0.043  0.009  (71.715,115.195)     0.735     4     
+CTS_ccl_a_buf_00239/A
+-     CLKBUFX8  rise   0.000   0.085   0.043  -      (72.500,142.405)    27.995   -       
+CTS_ccl_a_buf_00239/Y
+-     CLKBUFX8  rise   0.098   0.183   0.039  0.007  (71.915,142.555)     0.735     4     
+CTS_ccl_a_buf_00200/A
+-     CLKBUFX2  rise   0.000   0.183   0.039  -      (77.365,138.755)     9.250   -       
+CTS_ccl_a_buf_00200/Y
+-     CLKBUFX2  rise   0.100   0.283   0.040  0.002  (77.010,139.225)     0.825     4     
+CTS_ccl_a_buf_00069/A
+-     CLKBUFX2  rise   0.000   0.283   0.040  -      (76.965,134.085)     5.185   -       
+CTS_ccl_a_buf_00069/Y
+-     CLKBUFX2  rise   0.112   0.395   0.062  0.004  (76.610,133.615)     0.825     4     
+mul1_stage1_regs_reg[3][0]/CK
+-     DFFHQX1   rise   0.000   0.395   0.062  -      (109.675,131.890)   34.790   -       
+------------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMax_rcWorst:setup.late, min clock_path:
+=====================================================================
+
+PathID    : 3
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul3_stage1_regs_reg[9][5]/CK
+Delay     : 0.364
+
+----------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location         Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                    (um)              
+-- Clockpath trace ---------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.018  (0.000,38.000)   -           3     
+CTS_ccl_a_buf_00252/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (38.900,55.195)   56.095   -       
+CTS_ccl_a_buf_00252/Y
+-     CLKBUFX8  rise   0.085   0.085   0.045  0.010  (38.315,55.045)    0.735     4     
+CTS_ccl_a_buf_00241/A
+-     CLKBUFX8  rise   0.000   0.086   0.045  -      (37.700,60.325)    5.895   -       
+CTS_ccl_a_buf_00241/Y
+-     CLKBUFX8  rise   0.099   0.185   0.038  0.007  (37.115,60.475)    0.735     4     
+CTS_ccl_a_buf_00193/A
+-     CLKBUFX3  rise   0.000   0.185   0.038  -      (24.300,87.685)   40.025   -       
+CTS_ccl_a_buf_00193/Y
+-     CLKBUFX3  rise   0.085   0.270   0.032  0.003  (24.085,87.100)    0.800     4     
+CTS_ccl_a_buf_00037/A
+-     CLKBUFX2  rise   0.000   0.270   0.032  -      (8.765,87.455)    15.675   -       
+CTS_ccl_a_buf_00037/Y
+-     CLKBUFX2  rise   0.093   0.364   0.035  0.002  (8.410,87.925)     0.825     4     
+mul3_stage1_regs_reg[9][5]/CK
+-     DFFQX2    rise   0.000   0.364   0.035  -      (8.570,82.570)     5.515   -       
+----------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMax_rcWorst:setup.late, max clock_path:
+=====================================================================
+
+PathID    : 4
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul1_stage1_regs_reg[3][0]/CK
+Delay     : 0.396
+
+------------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location           Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                      (um)              
+-- Clockpath trace -----------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.018  (0.000,38.000)     -           3     
+CTS_ccl_a_buf_00251/A
+-     CLKBUFX8  rise   0.002   0.002   0.005  -      (72.300,115.045)   149.345   -       
+CTS_ccl_a_buf_00251/Y
+-     CLKBUFX8  rise   0.083   0.085   0.043  0.009  (71.715,115.195)     0.735     4     
+CTS_ccl_a_buf_00239/A
+-     CLKBUFX8  rise   0.000   0.085   0.043  -      (72.500,142.405)    27.995   -       
+CTS_ccl_a_buf_00239/Y
+-     CLKBUFX8  rise   0.098   0.183   0.039  0.007  (71.915,142.555)     0.735     4     
+CTS_ccl_a_buf_00200/A
+-     CLKBUFX2  rise   0.000   0.183   0.039  -      (77.365,138.755)     9.250   -       
+CTS_ccl_a_buf_00200/Y
+-     CLKBUFX2  rise   0.100   0.283   0.040  0.002  (77.010,139.225)     0.825     4     
+CTS_ccl_a_buf_00069/A
+-     CLKBUFX2  rise   0.000   0.283   0.040  -      (76.965,134.085)     5.185   -       
+CTS_ccl_a_buf_00069/Y
+-     CLKBUFX2  rise   0.112   0.396   0.062  0.004  (76.610,133.615)     0.825     4     
+mul1_stage1_regs_reg[3][0]/CK
+-     DFFHQX1   rise   0.000   0.396   0.062  -      (109.675,131.890)   34.790   -       
+------------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMin_rcBest:hold.early, min clock_path:
+====================================================================
+
+PathID    : 5
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul1_output_val_reg_reg[12]/CK
+Delay     : 0.073
+
+-----------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location          Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                     (um)              
+-- Clockpath trace ----------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.014  (0.000,38.000)    -           3     
+CTS_ccl_a_buf_00252/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (38.900,55.195)    56.095   -       
+CTS_ccl_a_buf_00252/Y
+-     CLKBUFX8  rise   0.020   0.020   0.010  0.008  (38.315,55.045)     0.735     4     
+CTS_ccl_a_buf_00244/A
+-     CLKBUFX3  rise   0.000   0.020   0.010  -      (85.100,85.975)    77.715   -       
+CTS_ccl_a_buf_00244/Y
+-     CLKBUFX3  rise   0.018   0.038   0.009  0.003  (84.885,86.560)     0.800     4     
+CTS_ccl_a_buf_00218/A
+-     CLKBUFX3  rise   0.000   0.038   0.009  -      (89.700,97.945)    16.200   -       
+CTS_ccl_a_buf_00218/Y
+-     CLKBUFX3  rise   0.017   0.055   0.008  0.003  (89.485,97.360)     0.800     4     
+CTS_ccl_a_buf_00128/A
+-     CLKBUFX2  rise   0.000   0.055   0.008  -      (88.165,97.715)     1.675   -       
+CTS_ccl_a_buf_00128/Y
+-     CLKBUFX2  rise   0.018   0.073   0.009  0.002  (87.810,98.185)     0.825     4     
+mul1_output_val_reg_reg[12]/CK
+-     DFFHQX1   rise   0.000   0.073   0.009  -      (90.475,101.110)    5.590   -       
+-----------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMin_rcBest:hold.early, max clock_path:
+====================================================================
+
+PathID    : 6
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul1_stage1_regs_reg[3][0]/CK
+Delay     : 0.078
+
+------------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location           Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                      (um)              
+-- Clockpath trace -----------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.014  (0.000,38.000)     -           3     
+CTS_ccl_a_buf_00251/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (72.300,115.045)   149.345   -       
+CTS_ccl_a_buf_00251/Y
+-     CLKBUFX8  rise   0.020   0.020   0.010  0.007  (71.715,115.195)     0.735     4     
+CTS_ccl_a_buf_00239/A
+-     CLKBUFX8  rise   0.000   0.020   0.010  -      (72.500,142.405)    27.995   -       
+CTS_ccl_a_buf_00239/Y
+-     CLKBUFX8  rise   0.019   0.040   0.008  0.005  (71.915,142.555)     0.735     4     
+CTS_ccl_a_buf_00200/A
+-     CLKBUFX2  rise   0.000   0.040   0.008  -      (77.365,138.755)     9.250   -       
+CTS_ccl_a_buf_00200/Y
+-     CLKBUFX2  rise   0.018   0.057   0.009  0.002  (77.010,139.225)     0.825     4     
+CTS_ccl_a_buf_00069/A
+-     CLKBUFX2  rise   0.000   0.057   0.009  -      (76.965,134.085)     5.185   -       
+CTS_ccl_a_buf_00069/Y
+-     CLKBUFX2  rise   0.020   0.078   0.013  0.004  (76.610,133.615)     0.825     4     
+mul1_stage1_regs_reg[3][0]/CK
+-     DFFHQX1   rise   0.000   0.078   0.013  -      (109.675,131.890)   34.790   -       
+------------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMin_rcBest:hold.late, min clock_path:
+===================================================================
+
+PathID    : 7
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul1_output_val_reg_reg[12]/CK
+Delay     : 0.074
+
+-----------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location          Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                     (um)              
+-- Clockpath trace ----------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.014  (0.000,38.000)    -           3     
+CTS_ccl_a_buf_00252/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (38.900,55.195)    56.095   -       
+CTS_ccl_a_buf_00252/Y
+-     CLKBUFX8  rise   0.020   0.020   0.011  0.008  (38.315,55.045)     0.735     4     
+CTS_ccl_a_buf_00244/A
+-     CLKBUFX3  rise   0.000   0.021   0.011  -      (85.100,85.975)    77.715   -       
+CTS_ccl_a_buf_00244/Y
+-     CLKBUFX3  rise   0.018   0.039   0.009  0.003  (84.885,86.560)     0.800     4     
+CTS_ccl_a_buf_00218/A
+-     CLKBUFX3  rise   0.000   0.039   0.009  -      (89.700,97.945)    16.200   -       
+CTS_ccl_a_buf_00218/Y
+-     CLKBUFX3  rise   0.017   0.056   0.008  0.003  (89.485,97.360)     0.800     4     
+CTS_ccl_a_buf_00128/A
+-     CLKBUFX2  rise   0.000   0.056   0.008  -      (88.165,97.715)     1.675   -       
+CTS_ccl_a_buf_00128/Y
+-     CLKBUFX2  rise   0.018   0.074   0.009  0.002  (87.810,98.185)     0.825     4     
+mul1_output_val_reg_reg[12]/CK
+-     DFFHQX1   rise   0.000   0.074   0.009  -      (90.475,101.110)    5.590   -       
+-----------------------------------------------------------------------------------------------
+
+Timing for timing corner dc_lsMin_rcBest:hold.late, max clock_path:
+===================================================================
+
+PathID    : 8
+Path type : skew group CLK/cmFunc (path 1 of 1)
+Start     : CLK
+End       : mul3_stage1_regs_reg[5][1]/CK
+Delay     : 0.079
+
+----------------------------------------------------------------------------------------------
+Name  Lib cell  Event  Incr   Arrival  Slew   Cap    Location         Distance  Fanout  Status
+                       (ns)   (ns)     (ns)   (pF)                    (um)              
+-- Clockpath trace ---------------------------------------------------------------------------
+CLK
+-     -         rise   -       0.000   0.004  0.014  (0.000,38.000)   -           3     
+CTS_ccl_a_buf_00252/A
+-     CLKBUFX8  rise   0.001   0.001   0.004  -      (38.900,55.195)   56.095   -       
+CTS_ccl_a_buf_00252/Y
+-     CLKBUFX8  rise   0.020   0.020   0.011  0.008  (38.315,55.045)    0.735     4     
+CTS_ccl_a_buf_00241/A
+-     CLKBUFX8  rise   0.000   0.021   0.011  -      (37.700,60.325)    5.895   -       
+CTS_ccl_a_buf_00241/Y
+-     CLKBUFX8  rise   0.019   0.040   0.009  0.005  (37.115,60.475)    0.735     4     
+CTS_ccl_a_buf_00194/A
+-     CLKBUFX3  rise   0.000   0.040   0.009  -      (34.500,60.325)    2.765   -       
+CTS_ccl_a_buf_00194/Y
+-     CLKBUFX3  rise   0.018   0.058   0.009  0.003  (34.285,59.740)    0.800     4     
+CTS_ccl_a_buf_00010/A
+-     CLKBUFX2  rise   0.000   0.058   0.009  -      (33.165,52.005)    8.855   -       
+CTS_ccl_a_buf_00010/Y
+-     CLKBUFX2  rise   0.021   0.079   0.014  0.004  (32.810,51.535)    0.825     4     
+mul3_stage1_regs_reg[5][1]/CK
+-     DFFQX2    rise   0.000   0.079   0.014  -      (34.770,29.530)   23.965   -       
+----------------------------------------------------------------------------------------------
+
+
